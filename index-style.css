@@ -1,0 +1,126 @@
+/* Reset default margins and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background-color: #1d011d;
+}
+
+/* Container for the profile */
+    .container {
+        display: flex;
+        align-items: center;
+        background-color: white;
+        border-radius: 15px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        padding: 2rem;
+        max-width: 900px;
+        width: 100%;
+    }
+    .container:hover {
+        background-color: #e0d2dc;
+    }
+
+/* Styling for profile image */
+.profile-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.profile-image img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #6a0572;
+}
+
+/* Content styling */
+.content {
+    flex: 2;
+    margin-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.content h1 {
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.content h2 {
+    font-size: 1.5rem;
+    color: #6a0572;
+    margin-bottom: 1rem;
+}
+
+.content p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 2rem;
+}
+
+/* Buttons styling */
+.buttons {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.button {
+    background-color: #6a0572;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.button:hover {
+    background-color: #a4508b;
+}
+
+
+
+ /* Responsive Design */
+ @media (max-width: 768px) {
+    .sidebar {
+        width: 200px;
+    }
+
+    .content {
+        margin-left: 220px;
+    }
+}
+
+@media (max-width: 576px) {
+    body {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        margin-bottom: 2rem;
+    }
+
+    .content {
+        margin-left: 0;
+    }
+}
+
+
+
+

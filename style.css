@@ -1,0 +1,241 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    width: 250px;
+    background-color: #6a0572;
+    padding: 2rem;
+    color: white;
+    position: fixed;
+    height: 100%;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #a4508b;
+    border-radius: 4px;
+}
+
+
+
+.sidebar img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 1rem;
+}
+
+.sidebar h1 {
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+.sidebar nav {
+    margin-top: 2rem;
+}
+
+.sidebar nav a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 0.8rem;
+    margin-bottom: 0.5rem;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.sidebar nav a:hover {
+    background-color: #a4508b;
+}
+
+    
+/* Social media icons container */
+.social-icons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding-bottom: 20px;
+}
+
+.social-icons a {
+    color: rgba(155, 91, 143, 0.645);
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #a4508b;
+}
+
+/* Content Area Styling */
+.content {
+    margin-left: 270px;
+    padding: 2rem;
+    flex: 1;
+}
+
+.section {
+    background: white;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.details ul {
+    list-style-type: disc; 
+    margin-left: 1rem; 
+    padding-left: 1.5rem;
+}
+
+.section h2 {
+    margin-bottom: 1rem;
+    color: #6a0572;
+    text-align: center;
+}
+
+.details {
+    display: block;
+}
+/* Projects Section Styling */
+ .project-table {
+            margin: 1.5rem 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 1.5rem;
+            background-color: #ffffff; 
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); 
+        }
+
+        th, td {
+            padding: 12px; 
+            text-align: left; 
+            border-bottom: 1px solid #ddd; 
+        }
+
+        .table-header {
+            background-color: #a69cac; 
+            color: #300430; 
+            font-weight: bold; 
+        }
+
+        .video-cell, .image-cell {
+            width: 30%; 
+            text-align: center; 
+        }
+
+        .video-cell video, .image-cell img {
+            max-width: 100%; 
+            height: auto; 
+        }
+
+        /* Responsive styling for tables */
+        @media (max-width: 768px) {
+            table {
+                display: block; 
+                overflow-x: auto; 
+            }
+
+            th, td {
+                display: block; 
+                text-align: left; 
+            }
+        }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .sidebar {
+            width: 200px;
+        }
+
+        .content {
+            margin-left: 220px;
+        }
+    }
+
+    @media (max-width: 576px) {
+        body {
+            flex-direction: column;
+        }
+
+        .sidebar {
+            width: 100%;
+            height: auto;
+            position: relative;
+            margin-bottom: 2rem;
+        }
+
+        .content {
+            margin-left: 0;
+        }
+    }
+
+    
+
+/* Contact Form Styling */
+#contactForm {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: left;
+    padding: 20px;
+    background-color: #661842;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#contactForm label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #e8dee8;
+}
+
+#contactForm input,
+#contactForm textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#contactForm button {
+    background-color: #a4508b;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#contactForm button:hover {
+    background-color: #6a0572;
+}
