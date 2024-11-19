@@ -12,33 +12,37 @@ body {
     min-height: 100vh;
     font-family: 'Poppins', sans-serif;
     background-color: #1d011d;
+    padding: 1rem; /* Added padding for small screens */
 }
 
 /* Container for the profile */
-    .container {
-        display: flex;
-        align-items: center;
-        background-color: white;
-        border-radius: 15px;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        padding: 2rem;
-        max-width: 900px;
-        width: 100%;
-    }
-    .container:hover {
-        background-color: #e0d2dc;
-    }
+.container {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    max-width: 900px;
+    width: 100%;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.container:hover {
+    background-color: #e0d2dc;
+}
 
 /* Styling for profile image */
 .profile-image {
     flex: 1;
     display: flex;
     justify-content: center;
+    margin-bottom: 1rem; /* Space for mobile */
 }
 
 .profile-image img {
-    width: 200px;
-    height: 200px;
+    width: 150px; /* Reduced size for mobile */
+    height: 150px;
     border-radius: 50%;
     object-fit: cover;
     border: 5px solid #6a0572;
@@ -47,19 +51,20 @@ body {
 /* Content styling */
 .content {
     flex: 2;
-    margin-left: 2rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    text-align: center; /* Centered text for mobile */
+    padding: 0 1rem;
 }
 
 .content h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: #333;
 }
 
 .content h2 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: #6a0572;
     margin-bottom: 1rem;
 }
@@ -67,14 +72,15 @@ body {
 .content p {
     font-size: 1rem;
     color: #555;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
 }
 
 /* Buttons styling */
 .buttons {
     display: flex;
     gap: 1rem;
-    margin-bottom: 1.5rem;
+    justify-content: center; /* Center buttons for mobile */
+    flex-wrap: wrap;
 }
 
 .button {
@@ -85,42 +91,55 @@ body {
     text-decoration: none;
     font-weight: bold;
     transition: background 0.3s;
+    text-align: center;
 }
 
 .button:hover {
     background-color: #a4508b;
 }
 
-
-
- /* Responsive Design */
- @media (max-width: 768px) {
-    .sidebar {
-        width: 200px;
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        padding: 1.5rem;
     }
 
-    .content {
-        margin-left: 220px;
+    .profile-image img {
+        width: 120px; /* Smaller image for tablets */
+        height: 120px;
+    }
+
+    .content h1 {
+        font-size: 1.8rem;
+    }
+
+    .content h2 {
+        font-size: 1rem;
     }
 }
 
 @media (max-width: 576px) {
-    body {
-        flex-direction: column;
+    .container {
+        padding: 1rem;
     }
 
-    .sidebar {
-        width: 100%;
-        height: auto;
-        position: relative;
-        margin-bottom: 2rem;
+    .profile-image img {
+        width: 100px;
+        height: 100px;
     }
 
-    .content {
-        margin-left: 0;
+    .content h1 {
+        font-size: 1.5rem;
+    }
+
+    .content p {
+        font-size: 0.9rem;
+    }
+
+    .button {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
     }
 }
-
-
-
-
